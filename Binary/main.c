@@ -12,10 +12,9 @@ void printer(void);
 
 int main(int argc, const char * argv[]) {
     
-    int number;
-    int ostatok;
+    int number, ostatok;
     char result[12];
-
+    
     printf("Enter INT number for conversion\n");
     scanf("%d", &number);
     printf("Your number is - %d\n", number);
