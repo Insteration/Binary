@@ -14,22 +14,34 @@ int main(int argc, const char * argv[]) {
     
     int number, ostatok;
     char result[12];
+    int arr[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    int i = 0;
     
     printf("Enter INT number for conversion\n");
     scanf("%d", &number);
     printf("Your number is - %d\n", number);
     
-    while (number > 1) {
+    while (number > 0) {
         
         ostatok = number % 2;
         number /= 2;
-        
-        sprintf(result, "%d", ostatok);
-        printf("%s", result);
+        arr[i] = ostatok;
+        i++;
+//        sprintf(result, "%d", ostatok);
+//        printf("%s", result);
         
     }
     
-    printf("%d\n", number);
+    arr[7] = number;
+    
+//    printf("%d\n", number);
+//
+//    printf("\n");
+//
+    for (int j = 7; j >= 0; j--) {
+        printf("%i", arr[j]);
+    }
+    
     printer();
     
     return 0;
